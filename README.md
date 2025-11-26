@@ -58,6 +58,8 @@ After only about 30 seconds, hash is cracked and the answer is Password1!
 
 -What were the second and third commands that the threat actor executed on the system? Format: command1,command2
 
-I thought initially that since we have the NTLMSSP password we can input it in Wireshark (Edit-Prefs-Protocols) and then filter for ntlmssp but Wireshark doesn't do that, so we need to run a script to decrypt the actual WinRM commands sent.
+I thought initially that since we have the NTLMSSP password we can input it in Wireshark (Edit-Prefs-Protocols) and then filter for ntlmssp but Wireshark doesn't do that, so we need to run a script to decrypt the actual WinRM commands sent. (Scipt link - https://github.com/h4sh5/decrypt-winrm/blob/main/winrm_decrypt.py)
+
+It throwed errors because its incompatible with python3.12 and in the end I got so tired of these that I 
 
 
