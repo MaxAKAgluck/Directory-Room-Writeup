@@ -62,4 +62,15 @@ I thought initially that since we have the NTLMSSP password we can input it in W
 
 It throwed errors because its incompatible with python3.12 and in the end I got so tired of these that I 
 
+After decrypting first command was whoami, second and third:
 
+<img width="1270" height="137" alt="image" src="https://github.com/user-attachments/assets/07bab9bc-6a1a-4eaf-bfbb-2b79b710667f" />
+
+<img width="1244" height="109" alt="image" src="https://github.com/user-attachments/assets/4dafbddb-8c78-4d8f-857b-b479f1495764" />
+
+I couldn't find the flag so I watched another walkthrough and they used grep to filter and decode every command, the flag is THM{Ya_G0t_R0aSt3d!}.
+
+A hard room, for sure.
+
+
+And the flag is THM{Ya_G0t_R0aSt3d!}
