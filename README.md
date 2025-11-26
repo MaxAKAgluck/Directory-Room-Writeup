@@ -60,7 +60,7 @@ After only about 30 seconds, hash is cracked and the answer is Password1!
 
 I thought initially that since we have the NTLMSSP password we can input it in Wireshark (Edit-Prefs-Protocols) and then filter for ntlmssp but Wireshark doesn't do that, so we need to run a script to decrypt the actual WinRM commands sent. (Scipt link - https://github.com/h4sh5/decrypt-winrm/blob/main/winrm_decrypt.py)
 
-It throwed errors because its incompatible with python3.12 and in the end I got so tired of these that I 
+It throwed errors because its incompatible with python3.12 and I spent about an hour investigating this and how to run it.
 
 After decrypting first command was whoami, second and third:
 
@@ -68,9 +68,15 @@ After decrypting first command was whoami, second and third:
 
 <img width="1244" height="109" alt="image" src="https://github.com/user-attachments/assets/4dafbddb-8c78-4d8f-857b-b479f1495764" />
 
-I couldn't find the flag so I watched another walkthrough and they used grep to filter and decode every command, the flag is THM{Ya_G0t_R0aSt3d!}.
+I couldn't find the flag because the code I used gave lots of error messages and I couldnt decode further commands of the attacker:
 
-A hard room, for sure.
+<img width="1224" height="674" alt="image" src="https://github.com/user-attachments/assets/91991832-1607-4418-8713-ecc533032ece" />
 
+This is very sad, so I had to look into another person's writeup for the final flag - THM{Ya_G0t_R0aSt3d!}.
 
-And the flag is THM{Ya_G0t_R0aSt3d!}
+Still, a lot of useful knowledge of how an attack on windows system might look like when investigating from a packet capture view - kerberos packets and auth process, ntlm auth and hash decryption.
+
+A hard room, for sure, I think the best description is this meme:
+
+<img width="1065" height="600" alt="image" src="https://github.com/user-attachments/assets/85bdeba8-e64e-4a17-bc5e-e224855ba8b6" />
+
