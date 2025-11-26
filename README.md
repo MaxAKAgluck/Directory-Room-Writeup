@@ -49,4 +49,15 @@ We need to decrypt this etype 23 hash, I went to hashcat docs (https://hashcat.n
 
 We have the structure that we need to make and after adjustments the hash becomes: $krb5asrep$23$larry.doe@DIRECTORY.THM:f8716efbaa984508ddde606756441480$805ab8be8cfb018a282718f7c040cd43924c6f9afeb6171230bbd3dccc79294dcf2f877a44c1a0981aadb7bb7a9510dd52d8dda4039ef4dcb444f18c9902be1623035e10aebf16ce4bdf5f7064f480e67e96ec2eb32bad95c5a1247bd7a241273fe80e281f4e6a99926f7969fcf803190c7096b947a33407f8578d4c0fb8b52d2aa8d0405a44b72bd21e014563cb71e82aee0e12538d0d440c930b98abf766e18ddc99a964e6e812ecf8dc8994a912a02074d40e5e6906915c1d216653d45df88636b51656f2c37de2020a2fd86ee7ecf6f0afe3f509fd31144e1573f9587155616532b664cd0b50cda8d4ba469f
 
-Password is 
+Run command hashcat -a 0 -m 18200 hash.txt rockyou.txt
+
+<img width="985" height="441" alt="image" src="https://github.com/user-attachments/assets/e8d7fd4d-8933-49b7-b8cf-108a20706874" />
+
+
+After only about 30 seconds, hash is cracked and the answer is Password1!
+
+-What were the second and third commands that the threat actor executed on the system? Format: command1,command2
+
+I thought initially that since we have the NTLMSSP password we can input it in Wireshark (Edit-Prefs-Protocols) and then filter for ntlmssp but Wireshark doesn't do that, so we need to run a script to decrypt the actual WinRM commands sent.
+
+
