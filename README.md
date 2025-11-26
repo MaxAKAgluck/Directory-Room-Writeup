@@ -88,6 +88,4 @@ A hard room, for sure, I think the best description is this meme:
 
 <img width="1065" height="600" alt="image" src="https://github.com/user-attachments/assets/85bdeba8-e64e-4a17-bc5e-e224855ba8b6" />
 
-[14](https://systemweakness.com/advent-of-cyber-2024-day-3-writeup-with-answers-tryhackme-walkthrough-6616c85045ba)
-[15](https://benheater.com/tryhackme-persisting-active-directory/)
-[16](https://infosecwriteups.com/putting-it-all-together-tryhackme-writeup-walkthrough-by-md-amiruddin-8a1bf4cfa455)
+
